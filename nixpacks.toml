@@ -1,0 +1,8 @@
+[phases.setup]
+aptPkgs = ["php-mysql"]
+
+[phases.build]
+cmds = []
+
+[phases.start]
+cmd = "sh deploy.sh"
