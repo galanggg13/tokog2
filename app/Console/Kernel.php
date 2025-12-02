@@ -13,7 +13,13 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        // AKTIFKAN SUPPORT MIGRATION COMMANDS DI LUMEN
+        \Illuminate\Database\Console\Migrations\MigrateCommand::class,
+        \Illuminate\Database\Console\Migrations\RollbackCommand::class,
+        \Illuminate\Database\Console\Migrations\RefreshCommand::class,
+        \Illuminate\Database\Console\Migrations\ResetCommand::class,
+        \Illuminate\Database\Console\Migrations\InstallCommand::class,
+        \Illuminate\Database\Console\Migrations\StatusCommand::class,
     ];
 
     /**
