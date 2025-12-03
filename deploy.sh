@@ -5,7 +5,14 @@ echo "================================"
 echo " RUNNING MIGRATIONS ON RAILWAY "
 echo "================================"
 
-php artisan migrate --force
+php artisan migrate --force || {
+    echo "================================"
+    echo " MIGRATION ERROR DETECTED "
+    echo " Dumping Laravel log:"
+    echo "================================"
+    cat storage/logs/*.log
+    exit 1
+}
 
 echo "================================"
 echo " MIGRATIONS DONE "
